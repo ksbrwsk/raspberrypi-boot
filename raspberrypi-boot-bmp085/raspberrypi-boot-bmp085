@@ -1,0 +1,36 @@
+#!/bin/bash
+# /etc/init.d/raspberrypi-boot-bmp085
+
+### BEGIN INIT INFO
+# Provides:          bmp085
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Should-Start:      $portmap
+# Should-Stop:       $portmap
+# X-Start-Before:    nis
+# X-Stop-After:      nis
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# X-Interactive:     true
+# Short-Description: bmp085 init script
+# Description:       Measuring temperature and sending data to webserver
+#
+### END INIT INFO
+
+case "$1" in
+    start)
+        echo "Starting pi thermometer bmp085"
+        sudo /home/pi/raspberrypi-boot-bmp085/bin/raspberrypi-boot-bmp085
+        ;;
+    stop)
+        echo "Stopping pi thermometer bmp085"
+        killall bmp085
+        ;;
+    *)
+        echo "Usage: /etc/init.d/bmp085 start|stop"
+        exit 1
+        ;;
+esac
+exit 0
+
+

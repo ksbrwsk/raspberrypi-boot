@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:int-mqtt="http://www.springframework.org/schema/integration/mqtt"
+       xmlns:int-event="http://www.springframework.org/schema/integration/event"
+       xmlns:int="http://www.springframework.org/schema/integration"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/integration/mqtt http://www.springframework.org/schema/integration/mqtt/spring-integration-mqtt.xsd
+        http://www.springframework.org/schema/integration/event http://www.springframework.org/schema/integration/event/spring-integration-event.xsd">
+
+    <bean id="defaultPahoMessageConverter" class="org.springframework.integration.mqtt.support.DefaultPahoMessageConverter"/>
+
+    <bean id="clientFactory" class="org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory">
+        <property name="userName" value="${mqtt.username}"/>
+        <property name="password" value="${mqtt.password}"/>
+    </bean>
+
+    <bean id="bmp085Extractor" class="de.ksbrwsk.bmp085.Bmp085MessageExtractor"/>
+
+    <int:object-to-json-transformer input-channel="extractedBmp085Data" output-channel="mqttBmp085Output"/>
+
+    <int:channel id="extractedBmp085Data"/>
+    <int:channel id="mqttBmp085Output"/>
+
+    <int:service-activator id="bmp085ExtractorActivator" input-channel="bmp085DataEventChannel"
+                output-channel="extractedBmp085Data"
+                ref="bmp085Extractor"/>
+
+    <int:publish-subscribe-channel id="bmp085DataEventChannel"/>
+
+    <int-event:inbound-channel-adapter channel="bmp085DataEventChannel"
+                                       event-types="de.ksbrwsk.bmp085.Bmp085DataEvent"/>
+
+    <int-mqtt:outbound-channel-adapter id="withTemperatureConverter"
+                                       client-id="${mqtt.clientid}"
+                                       url="${mqtt.url}"
+                                       converter="defaultPahoMessageConverter"
+                                       client-factory="clientFactory"
+                                       default-topic="${mqtt.temperature.topic}"
+                                       channel="mqttBmp085Output"/>
+</beans>

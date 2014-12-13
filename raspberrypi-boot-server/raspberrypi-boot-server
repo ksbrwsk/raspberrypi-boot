@@ -1,0 +1,30 @@
+#!/bin/bash
+# /etc/init.d/raspberrypi-boot-server
+
+### BEGIN INIT INFO
+# Provides:          bmp085
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: initscript for raspberrypi-boot-server
+# Description:       Websocket server pushing MQTT data
+### END INIT INFO
+
+
+case "$1" in
+    start)
+        echo "Starting raspberrypi-boot-server"
+        sudo /home/raspberrypi-boot-server/bin/raspberrypi-boot-server&
+        ;;
+    stop)
+        echo "Stopping raspberrypi-boot-server"
+        killall raspberrypi-boot-server
+        ;;
+    *)
+        echo "Usage: /etc/init.d/raspberrypi-boot-server start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0

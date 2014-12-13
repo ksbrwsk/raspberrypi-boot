@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>Raspberry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="js/sockjs-0.3.4.js"></script>
+    <script src="js/stomp.js"></script>
+    <script src="js/ksbrwsk.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/controlfrog.css" rel="stylesheet" media="screen">
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/gauge.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/jquery.sparklines.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/controlfrog-plugins.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <script src="js/excanvas.min.js"></script>
+    <![endif]-->
+
+
+    <script>
+        var themeColour = 'black';
+    </script>
+    <script src="js/controlfrog.js"></script>
+
+
+</head>
+<body class="black">
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+
+<div id="conversationDiv" class="cf-container cf-nav-active">
+
+    <div class="row">
+
+        <div class="col-sm-6 cf-item" id="fadeThermometer">
+            <header>
+                <p>
+                    <span id="deviceId">Waiting for data</span>
+                </p>
+            </header>
+            <div class="content cf-svp clearfix" id="thermometer">
+                <div class="chart" data-percent="0" data-layout="l-6">
+                    <div class="metrics">
+                        <span class="metric">0</span>
+                        <span class="metric-small">&deg;C</span>
+                    </div>
+                </div>
+                <div class="cf-td">
+                    <div class="cf-td"><p>Pressure (hPa):</p>
+                        <p class="cf-td metric-small" id="pressureInHPa">Waiting for data</p>
+                    </div>
+                </div>
+                <div class="cf-td">
+                    <div class="cf-td"><p>Measured at:</p>
+                        <p class="cf-td metric-small" id="measuredAt">Waiting for data</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //end col -->
+    </div>
+
+</div>
+
+
+</body>
+</html>
