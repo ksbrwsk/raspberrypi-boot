@@ -42,7 +42,7 @@ raspberrypi-boot-server:
 
 IDE integration
 ---------------
-You can create an IDEA project for the full dolphin code by running
+You can create an IDEA project code by running
 - gradlew idea
 
 or for eclipse via
