@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ksbrwsk.de - Raspberry PI #1</title>
+    <title>ksbrwsk.de - Temperature</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="UI for BMP085 sensor data">
     <meta name="author" content="Kai Saborowski">
@@ -10,7 +10,6 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/pace.css" rel="stylesheet">
     <link href="css/endless.min.css" rel="stylesheet">
 
 </head>
@@ -20,47 +19,41 @@
 <div id="wrapper" class="preload">
     <div class="padding-md">
         <div class="row">
-
-            <div class="col-sm-6 col-md-3">
-                <div class="panel-stat3 bg-danger">
-                    <h2 class="m-top-none"><span id="deviceId">Device Id</span></h2>
-                    <h5><span id="deviceLocation">location</span></h5>
-                </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="panel bg-primary">
+                    <div class="panel-body text-center">
+                        <span class="h4 block pull-right m-bottom-md" id="deviceId">-Waiting ...-</span>
+                        <div class="seperator"></div>
+                        <div class="m-top-md">
+                            <i class="fa fa-cloud fa-4x">&nbsp;</i><span class="h1" id="temperature">0.0</span> &deg;C
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                Pressure in hPa
+                                <strong class="block" id="pressureInHPa">-Waiting ...</strong>
+                            </div>
+                            <div class="col-xs-4">
+                                measured at
+                                <strong class="block" id="measuredAt"></strong>
+                            </div>
+                            <div class="col-xs-4">
+                                last value(&deg;C)
+                                <strong class="block" id="oldValue"></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /panel -->
             </div>
-            <!-- /.col -->
-            <div class="col-sm-6 col-md-3">
-                <div class="panel-stat3 bg-primary">
-                    <h2 class="m-top-none"><span id="temperature">-Awaiting data-</span> &deg;C</h2>
-                    <h5>Temperature in &deg;C</h5>
-                    Last value <span class="m-left-xs" id="oldValue">-Awaiting data-</span>
-
-                </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-6 col-md-3">
-                <div class="panel-stat3 bg-warning">
-                    <h2 class="m-top-none"><span id="pressureInHPa">-Awaiting data-</span> hPa</h2>
-                    <h5>Pressure in hPa</h5>
-                </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-6 col-md-3">
-                <div class="panel-stat3 bg-success">
-                    <h2 class="m-top-none" id="measuredAt">-Awaiting data-</h2>
-                    <h5>Measured at</h5>
-
-                </div>
-            </div>
-            <!-- /.col -->
-
         </div>
     </div>
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.cookie.min.js"></script>
 <script src="js/endless.js"></script>
 <script src="js/sockjs-0.3.4.js"></script>
 <script src="js/stomp.js"></script>
 <script src="js/ksbrwsk.js"></script>
-
 </body>
 </html>

@@ -7,19 +7,17 @@ var pressureInHPa = 0;
 var deviceId = 'Device Id';
 var deviceLocation = 'location';
 
-
 connect();
 
 $('#fadeThermometer').fadeIn('slow');
 $('#fadeDateTime').fadeIn('slow');
 $('#fadeDevice').fadeIn('slow');
 
-
 function connect() {
     var socket = new SockJS('/hello');
     stompClient = Stomp.over(socket);
-    stompClient.connect({}, function(frame) {
-        stompClient.subscribe('/topic/temperature', function(temperatureMessage){
+    stompClient.connect({}, function () {
+        stompClient.subscribe('/topic/temperature', function (temperatureMessage) {
             var temperature = JSON.parse(temperatureMessage.body);
             showTemperature(temperature);
         });
@@ -27,7 +25,6 @@ function connect() {
 }
 
 function showTemperature(message) {
-
 
     lastValue = temperature;
     temperature = parseFloat(message.degreesInCelsius).toFixed(1);

@@ -13,7 +13,7 @@ public class Bmp085Message {
     private double pressureInHPa;
     private double heightInMeter;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss Z")
     private Date measuredAt;
 
     public Bmp085Message(String deviceId, String deviceLocation, double degreesInCelsius, double pressureInHPa, double heightInMeter) {

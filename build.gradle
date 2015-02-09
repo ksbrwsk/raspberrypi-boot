@@ -1,25 +1,60 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-
-jar {
-    baseName = 'raspberrypi-boot'
-    version = '0.0.1-SNAPSHOT'
-}
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
-eclipse {
-    classpath {
-        containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-        containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+buildscript {
+    repositories {
+        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
+        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        maven { url "http://repo.springsource.org/libs-milestone" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
+subprojects {
+    buildscript {
+        repositories {
+            //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
+            //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
+            mavenCentral()
+            maven { url "http://repo.spring.io/snapshot" }
+            maven { url "http://repo.spring.io/milestone" }
+            maven { url "http://repo.springsource.org/libs-milestone" }
+        }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        }
+    }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.2'
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'spring-boot'
+
+    version = '1.0'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
+        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+        maven { url "http://repo.springsource.org/libs-milestone" }
+
+    }
+
+    eclipse {
+        classpath {
+            containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+            containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+        }
+    }
+
+    task wrapper(type: Wrapper) {
+        gradleVersion = '2.2'
+    }
+
 }
