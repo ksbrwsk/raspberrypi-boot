@@ -1,20 +1,19 @@
 jar {
-    baseName = 'raspberrypi-boot-bmp085'
+    baseName = 'raspberrypi-boot-gdata'
     version = '0.0.1-SNAPSHOT'
 }
-applicationDefaultJvmArgs = ["-Dspring.profiles.active=prod"]
+applicationDefaultJvmArgs = ["-Dspring.profiles.active=dev"]
 
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter")
     compile("org.springframework.boot:spring-boot-starter-integration")
     compile("org.springframework.integration:spring-integration-flow:1.0.0.RELEASE")
     compile("org.springframework.integration:spring-integration-java-dsl:1.0.1.RELEASE")
     compile("org.springframework.integration:spring-integration-mqtt:${springIntegrationVersion}")
     compile("org.springframework.integration:spring-integration-event:${springIntegrationVersion}")
     compile("org.eclipse.paho:mqtt-client:0.4.0")
+    compile("com.google.gdata:core:1.47.1")
+    compile 'com.google.apis:google-api-services-oauth2:v2-rev86-1.19.1'
     compile("com.fasterxml.jackson.core:jackson-databind:2.4.4")
-    compile("com.pi4j:pi4j-distribution:0.0.5")
-    compile("com.google.guava:guava:18.0")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
 }

@@ -38,7 +38,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
     public static final int DATA_REG = 246;
     public static final byte READTEMPCMD = 46;
     public static final int READPRESSURECMD = 244;
-    private static Logger log = LoggerFactory.getLogger(Bmp085I2cReader.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(Bmp085I2cReader.class);
     private boolean running = false;
     private Bmp085DataEventPublisher bmp085DataEventPublisher;
     private Executor executor;
@@ -64,7 +64,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
         this.executor = executor;
         this.deviceInformation = deviceInformation;
         try {
-            log.info("opening I2c Factory");
+            LOGGER.info("opening I2c Factory");
             bmp085device = I2CFactory.getInstance(RASPI_BUS_ID).getDevice(BMP085_I2C_ADDR);
             connect();
         } catch (Exception e) {
@@ -138,7 +138,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
 
     public void connect() throws Bmp085ReaderException {
         try {
-            log.info("Connecting Sensor");
+            LOGGER.info("Connecting Sensor");
             readCalibrationData();
             startListening();
             running = true;
@@ -185,7 +185,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
                     Thread.sleep(15000L);
                 }
             } catch (Exception e) {
-                Bmp085I2cReader.log.error("Error reading sensor data", e);
+                Bmp085I2cReader.LOGGER.error("Error reading sensor data", e);
             }
         }
     }

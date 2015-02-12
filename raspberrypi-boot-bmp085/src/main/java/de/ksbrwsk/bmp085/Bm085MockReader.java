@@ -14,10 +14,10 @@ import java.util.concurrent.Executor;
  * @author saborowski
  */
 @Component
-@Profile("dev")
+@Profile(value={"dev", "sabo"})
 public class Bm085MockReader implements Bmp085Reader {
 
-    private final Logger log = LoggerFactory.getLogger(Bm085MockReader.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(Bm085MockReader.class);
 
     /**
      * the device information containing device id and location.
@@ -44,20 +44,20 @@ public class Bm085MockReader implements Bmp085Reader {
         try {
             this.connect();
         } catch (Bmp085ReaderException e) {
-            log.error("Error connecting the mock reader", e);
+            LOGGER.error("Error connecting the mock reader", e);
         }
     }
 
     @Override
     public void connect() throws Bmp085ReaderException {
-        log.info("Connecting BMP085 reader");
+        LOGGER.info("Connecting BMP085 reader");
         this.running = true;
         this.startListening();
     }
 
     @Override
     public void disconnect() throws Bmp085ReaderException {
-        log.info("Disconnecting BMP085 reader");
+        LOGGER.info("Disconnecting BMP085 reader");
         this.running = false;
     }
 
@@ -83,9 +83,9 @@ public class Bm085MockReader implements Bmp085Reader {
                 bmp085DataEventPublisher.bmp085DataEvent(message);
 
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
-                    log.error("thread interrupted", e);
+                    LOGGER.error("thread interrupted", e);
 
                 }
             }

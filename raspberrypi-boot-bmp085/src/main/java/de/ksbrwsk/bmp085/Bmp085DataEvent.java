@@ -3,7 +3,7 @@ package de.ksbrwsk.bmp085;
 import org.springframework.context.ApplicationEvent;
 
 /**
- * event when sensor measures new data.
+ * event triggered when sensor measures new data.
  *
  * @author saborowski
  */

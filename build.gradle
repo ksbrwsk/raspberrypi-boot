@@ -1,7 +1,5 @@
 buildscript {
     repositories {
-        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
-        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
         mavenCentral()
         maven { url "http://repo.spring.io/snapshot" }
         maven { url "http://repo.spring.io/milestone" }
@@ -14,8 +12,6 @@ buildscript {
 subprojects {
     buildscript {
         repositories {
-            //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
-            //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
             mavenCentral()
             maven { url "http://repo.spring.io/snapshot" }
             maven { url "http://repo.spring.io/milestone" }
@@ -37,13 +33,10 @@ subprojects {
     compileJava.options.encoding = 'UTF-8'
 
     repositories {
-        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-release" }
-        //maven { url "http://vesscm.ves.de:8081/artifactory/libs-snapshot" }
         mavenCentral()
         maven { url "http://repo.spring.io/snapshot" }
         maven { url "http://repo.spring.io/milestone" }
         maven { url "http://repo.springsource.org/libs-milestone" }
-
     }
 
     eclipse {
