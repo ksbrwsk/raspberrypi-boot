@@ -1,61 +1,117 @@
 # Simple Spring Boot application measuring temperature with a BMP085 sensor.
 
+Features
+--------
+
+* A [Springboot](http://projects.spring.io/spring-boot/) standalone application measuring temperature and pressure with an BMP085 sensor
+* Measured data is sent via MQTT to a [RabbitMQ](http://www.rabbitmq.com/) server
+* Application is using [Spring-Integration 4.1](http://projects.spring.io/spring-boot/) with annotation based configuration
+* A [Springboot](http://projects.spring.io/spring-boot/) web application consuming the MQTT data and relaying it via STOMP
+* pushing the data via Websocket to the clients
+* A [Springboot](http://projects.spring.io/spring-boot/) standalone application consuming the MQTT data and writing it to a Google Spreadsheet
+
+See a live demo [here](http://www.ksbrwsk.de:8080/)
+
 Prerequisites
 -------------
 
-What you need to run the applications:
+**What you need to run the applications:**
 
-> Java 8
+* Java 8
+* RabbitMQ (http://www.http://www.rabbitmq.com)
+* RaspberryPI with Java 8 installed and wired BMP085 sensor
+* pi4j (http://pi4j.com)
 
-> RabbitMQ (http://www.http://www.rabbitmq.com)
+Module description
+------------------
 
-> RaspberryPI with Java 8 installed
+###raspberrypi-boot-bmp085###
 
-> pi4j (http://pi4j.com)
+This is the application meant to run on Raspberry PI, measuring data via BMP085 sensor.
+In development mode there is a mock implementation generating random data.
 
-How to build
-------------
+Application properties can be configured in
 ```
-gradlew clean build
+raspberrypi-boot-bmp085/src/main/resources
 ```
 
-How to run
-----------
+Use
 
-raspberrypi-boot-bmp085:
-
-on your development machine:
+```
+./gradlew build
+```
+to build the application and
 
 ```
 java -jar build/libs/raspberrypi-boot-bmp085-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
-gradlew bootRun -Dspring.profiles.active=dev
+./gradlew bootRun -Dspring.profiles.active=dev
 ```
 
-on your raspberry pi:
+to run it on the development machine. Use
 
 ```
-java -jar build/libs/raspberrypi-boot-bmp085-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
-gradlew bootRun -Dspring.profiles.active=prod
+./gradlew build distZip
+```
+to create a distribution for deployment on Raspberry Pi.
+
+
+###raspberrypi-boot-server###
+
+This is the web application relaying the MQTT data via stomp and pushing
+it to the clients via Websocket.
+
+Application properties can be configured in
+```
+raspberrypi-boot-server/src/main/resources
 ```
 
-raspberrypi-boot-server:
+Use
 
 ```
-java -jar build/libs/raspberrypi-boot-server-0.0.1-SNAPSHOT.jar
-gradlew bootRun -Dspring.profiles.active=dev
+./gradlew build
 ```
-
-raspberrypi-boot-gdata:
+to build the application and
 
 ```
-java -jar build/libs/raspberrypi-boot-gdata-0.0.1-SNAPSHOT.jar
-gradlew bootRun -Dspring.profiles.active=dev
+./gradlew bootRun -Dspring.profiles.active=dev
 ```
+
+to run it.
+
+###raspberrypi-boot-gdata###
+
+This is the application consuming the MQTT data and writing it to a
+Google Data Spreadsheet.
+Please make sure you have an Google Account and downloaded the
+JSON Credentials file as described in [this document](https://developers.google.com/accounts/docs/OAuth2)
+
+Application properties can be configured in
+```
+raspberrypi-boot-gdata/src/main/resources
+```
+
+Use
+
+```
+./gradlew build
+```
+to build the application and
+
+```
+./gradlew bootRun -Dspring.profiles.active=dev
+```
+
+to run it.
 
 IDE integration
 ---------------
 You can create an IDEA project code by running
-- gradlew idea
+```
+./gradlew idea
+```
 
 or for eclipse via
-- gradlew eclipse
+```
+./gradlew eclipse
+```
+

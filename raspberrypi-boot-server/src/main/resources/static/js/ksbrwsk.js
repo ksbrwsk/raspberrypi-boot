@@ -14,7 +14,7 @@ $('#fadeDateTime').fadeIn('slow');
 $('#fadeDevice').fadeIn('slow');
 
 function connect() {
-    var socket = new SockJS('/hello');
+    var socket = new SockJS('/temperature');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function () {
         stompClient.subscribe('/topic/temperature', function (temperatureMessage) {

@@ -3,5 +3,11 @@ server:
   address: 0.0.0.0
   sessionTimeout: 30
 
+broker:
+  clientLogin: guest
+  clientPasscode: guest
+  relayHost: localhost
+  relayPort: 61613
+
 logging.level.org.springframework: WARN
 logging.level.de.ksbrwsk: INFO

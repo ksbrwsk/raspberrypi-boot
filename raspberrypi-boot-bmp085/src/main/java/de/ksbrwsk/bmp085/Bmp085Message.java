@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * @author saborowski
+ */
 public class Bmp085Message {
 
     private String deviceId;

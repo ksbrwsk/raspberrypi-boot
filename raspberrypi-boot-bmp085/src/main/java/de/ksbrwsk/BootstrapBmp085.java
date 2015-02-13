@@ -15,7 +15,6 @@ import org.springframework.context.annotation.ImportResource;
  */
 @SpringBootApplication
 @Import(value = {ApplicationConfiguration.class })
-@ImportResource(value = { "classpath:/raspberrypi-bmp085-integration.xml" })
 public class BootstrapBmp085 {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(BootstrapBmp085.class);

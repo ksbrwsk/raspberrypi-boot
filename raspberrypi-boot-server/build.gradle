@@ -11,6 +11,5 @@ dependencies {
     compile("org.projectreactor:reactor-core:1.1.5.RELEASE")
     compile("org.projectreactor:reactor-tcp:1.0.1.RELEASE")
     compile("org.projectreactor:reactor-net:1.1.5.RELEASE")
-    compile("org.springframework.boot:spring-boot-starter-undertow:${springBootVersion}")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

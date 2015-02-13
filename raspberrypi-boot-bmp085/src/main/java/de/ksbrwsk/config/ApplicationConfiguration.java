@@ -1,8 +1,8 @@
 package de.ksbrwsk.config;
 
+import de.ksbrwsk.bmp085.Bmp085DataEvent;
 import de.ksbrwsk.bmp085.Bmp085DataEventPublisher;
 import de.ksbrwsk.bmp085.DeviceInformation;
-import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,7 +10,16 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.integration.annotation.IntegrationComponentScan;
+import org.springframework.integration.annotation.ServiceActivator;
+import org.springframework.integration.annotation.Transformer;
+import org.springframework.integration.channel.DirectChannel;
+import org.springframework.integration.channel.PublishSubscribeChannel;
 import org.springframework.integration.config.EnableIntegration;
+import org.springframework.integration.event.inbound.ApplicationEventListeningMessageProducer;
+import org.springframework.integration.json.ObjectToJsonTransformer;
+import org.springframework.integration.mqtt.core.DefaultMqttPahoClientFactory;
+import org.springframework.integration.mqtt.outbound.MqttPahoMessageHandler;
+import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
@@ -24,7 +33,7 @@ import java.util.concurrent.Executor;
 @PropertySource("classpath:/application-${spring.profiles.active}.properties")
 public class ApplicationConfiguration implements EnvironmentAware {
 
-    private RelaxedPropertyResolver propertyResolver;
+    private Environment environment;
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
@@ -33,19 +42,73 @@ public class ApplicationConfiguration implements EnvironmentAware {
 
     @Override
     public void setEnvironment(Environment environment) {
-        this.propertyResolver = new RelaxedPropertyResolver(environment);
+        this.environment = environment;
     }
 
     @Bean
     public DeviceInformation deviceInformation() {
-        String deviceId = this.propertyResolver.getProperty("deviceId");
-        String deviceLocation = this.propertyResolver.getProperty("deviceLocation");
+        String deviceId = this.environment.getProperty("deviceId");
+        String deviceLocation = this.environment.getProperty("deviceLocation");
         return new DeviceInformation(deviceId, deviceLocation);
+    }
+
+    @Bean
+    public DefaultPahoMessageConverter defaultPahoMessageConverter() {
+        return new DefaultPahoMessageConverter();
+    }
+
+    @Bean
+    public DefaultMqttPahoClientFactory defaultMqttPahoClientFactory() {
+        DefaultMqttPahoClientFactory defaultMqttPahoClientFactory = new DefaultMqttPahoClientFactory();
+        defaultMqttPahoClientFactory.setUserName(this.environment.getProperty("mqtt.username"));
+        defaultMqttPahoClientFactory.setPassword(this.environment.getProperty("mqtt.password"));
+        return defaultMqttPahoClientFactory;
+    }
+
+    @Bean
+    @ServiceActivator(inputChannel = "mqttOut")
+    public MqttPahoMessageHandler mqttPahoMessageHandler() {
+        String url = this.environment.getProperty("mqtt.url");
+        String clientId = this.environment.getProperty("mqtt.clientId");
+        String topic = this.environment.getProperty("mqtt.temperature.topic");
+        MqttPahoMessageHandler mqttPahoMessageHandler = new MqttPahoMessageHandler(url, clientId, this.defaultMqttPahoClientFactory());
+        mqttPahoMessageHandler.setConverter(this.defaultPahoMessageConverter());
+        mqttPahoMessageHandler.setDefaultTopic(topic);
+        return mqttPahoMessageHandler;
+    }
+
+    @Bean
+    public PublishSubscribeChannel newBmp085DataEvent() {
+        return new PublishSubscribeChannel();
+    }
+
+    @Bean
+    public DirectChannel mqttOut() {
+        return new DirectChannel();
+    }
+
+    @Bean
+    public DirectChannel bmp085Data() {
+        return new DirectChannel();
+    }
+
+    @Bean
+    @Transformer(inputChannel = "bmp085Data", outputChannel = "mqttOut")
+    public ObjectToJsonTransformer objectToJsonTransformer() {
+        return new ObjectToJsonTransformer();
     }
 
     @Bean
     public Bmp085DataEventPublisher bmp085DataEventPublisher() {
         return new Bmp085DataEventPublisher();
+    }
+
+    @Bean
+    public ApplicationEventListeningMessageProducer applicationEventListeningMessageProducer() {
+        ApplicationEventListeningMessageProducer messageProducer = new ApplicationEventListeningMessageProducer();
+        messageProducer.setEventTypes(Bmp085DataEvent.class);
+        messageProducer.setOutputChannel(this.newBmp085DataEvent());
+        return messageProducer;
     }
 
     @Bean
