@@ -17,7 +17,7 @@ import java.util.concurrent.Executor;
  * @author saborowski
  */
 @Component
-@Profile("prod")
+@Profile({"prod", "sabo"})
 public class Bmp085I2cReader implements Bmp085Reader {
 
     public static final int BMP085_I2C_ADDR = 119;
@@ -182,7 +182,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
 
                     Bmp085Message message = convertPressureTemp(rawPressure, rawTemperature);
                     bmp085DataEventPublisher.bmp085DataEvent(message);
-                    Thread.sleep(15000L);
+                    Thread.sleep(20000L);
                 }
             } catch (Exception e) {
                 Bmp085I2cReader.LOGGER.error("Error reading sensor data", e);

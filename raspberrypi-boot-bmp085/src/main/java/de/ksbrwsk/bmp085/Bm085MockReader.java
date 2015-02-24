@@ -14,7 +14,7 @@ import java.util.concurrent.Executor;
  * @author saborowski
  */
 @Component
-@Profile(value={"dev", "sabo"})
+@Profile(value={"dev"})
 public class Bm085MockReader implements Bmp085Reader {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(Bm085MockReader.class);
