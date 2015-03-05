@@ -6,8 +6,8 @@ applicationDefaultJvmArgs = ["-Dspring.profiles.active=prod"]
 
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-integration")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-integration:${springBootVersion}")
     compile("org.springframework.integration:spring-integration-flow:1.0.0.RELEASE")
     compile("org.springframework.integration:spring-integration-java-dsl:1.0.1.RELEASE")
     compile("org.springframework.integration:spring-integration-mqtt:${springIntegrationVersion}")
@@ -16,5 +16,5 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-databind:2.4.4")
     compile("com.pi4j:pi4j-distribution:0.0.5")
     compile("com.google.guava:guava:18.0")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 }
