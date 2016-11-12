@@ -38,22 +38,16 @@ raspberrypi-boot-bmp085/src/main/resources
 Use
 
 ```
-./gradlew build
+mvn clean install
 ```
 to build the application and
 
 ```
-java -jar build/libs/raspberrypi-boot-bmp085-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
-./gradlew bootRun -Dspring.profiles.active=dev
+java -jar target/raspberrypi-boot-bmp085-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+mvn spring-boot:run -Dspring.profiles.active=dev
 ```
 
-to run it on the development machine. Use
-
-```
-./gradlew build distZip
-```
-to create a distribution for deployment on Raspberry Pi.
-
+to run it on the development machine.
 
 ###raspberrypi-boot-server###
 
@@ -68,12 +62,12 @@ raspberrypi-boot-server/src/main/resources
 Use
 
 ```
-./gradlew build
+mvn clean install
 ```
 to build the application and
 
 ```
-./gradlew bootRun -Dspring.profiles.active=dev
+mvn springBoot:run -Dspring.profiles.active=dev
 ```
 
 to run it.
@@ -93,25 +87,12 @@ raspberrypi-boot-gdata/src/main/resources
 Use
 
 ```
-./gradlew build
+mvn clean install
 ```
 to build the application and
 
 ```
-./gradlew bootRun -Dspring.profiles.active=dev
+mvn springBoot:run -Dspring.profiles.active=dev
 ```
 
 to run it.
-
-IDE integration
----------------
-You can create an IDEA project code by running
-```
-./gradlew idea
-```
-
-or for eclipse via
-```
-./gradlew eclipse
-```
-
