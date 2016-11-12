@@ -1,6 +1,0 @@
-rootProject.name = 'raspberrypi-boot'
-
-include 'raspberrypi-boot-server'
-include 'raspberrypi-boot-bmp085'
-include 'raspberrypi-boot-gdata'
-

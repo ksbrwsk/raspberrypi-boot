@@ -67,7 +67,7 @@ public class Bm085MockReader implements Bmp085Reader {
     }
 
     /**
-     * Listener creating a Bmp085DataEvent every 3 seconds.
+     * Listener creating a Bmp085DataEvent every 10 seconds.
      *
      * @author saborowski
      */
@@ -76,7 +76,7 @@ public class Bm085MockReader implements Bmp085Reader {
         @Override
         public void run() {
             while (running) {
-                double temperature = randomDouble(19.7, 23.2);
+                double temperature = randomDouble(18.7, 24.2);
                 double pressure = randomDouble(996.0, 1005.2);
                 Bmp085Message message = new Bmp085Message(deviceInformation.getDeviceId(), deviceInformation.getLocation(),
                         temperature, pressure, 180.0);

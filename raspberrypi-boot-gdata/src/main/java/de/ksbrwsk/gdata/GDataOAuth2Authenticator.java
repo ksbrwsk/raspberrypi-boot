@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
 import java.io.FileReader;
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.Optional;
 @DependsOn(value = "gDataInformation")
 public class GDataOAuth2Authenticator {
 
-    private static final java.io.File DATA_STORE_DIR = new java.io.File(System.getProperty("user.home"), ".store/oauth2_sample");
+    private static final File DATA_STORE_DIR = new File(System.getProperty("user.home"), ".store/oauth2_sample");
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 
     private static List<String> scopesList;
