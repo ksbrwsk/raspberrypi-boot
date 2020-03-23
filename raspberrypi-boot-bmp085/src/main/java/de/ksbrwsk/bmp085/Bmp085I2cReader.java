@@ -151,7 +151,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
         try {
             running = false;
             I2CFactory.getInstance(1).close();
-        } catch (IOException e) {
+        } catch (IOException | I2CFactory.UnsupportedBusNumberException e) {
             throw new Bmp085ReaderException(e);
         }
     }

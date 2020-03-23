@@ -18,7 +18,7 @@ public class GDataApplication {
     private final static Logger LOGGER = LoggerFactory.getLogger(GDataApplication.class);
 
     public static void main(String args[]) {
-        new SpringApplicationBuilder(GDataApplication.class).web(false).run(args);
+        new SpringApplicationBuilder(GDataApplication.class).run(args);
         LOGGER.info("GDataApplication started.");
     }
 }

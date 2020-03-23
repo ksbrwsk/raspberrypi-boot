@@ -17,7 +17,7 @@ public class PushoverApplication {
     private final static Logger LOGGER = LoggerFactory.getLogger(PushoverApplication.class);
 
     public static void main(String args[]) {
-        new SpringApplicationBuilder(PushoverApplication.class).web(false).run(args);
+        new SpringApplicationBuilder(PushoverApplication.class).run(args);
         LOGGER.info("PushoverApplication started.");
     }
 }
