@@ -25,7 +25,7 @@ Prerequisites
 Module description
 ------------------
 
-###raspberrypi-boot-bmp085###
+### raspberrypi-boot-bmp085
 
 This is the application meant to run on Raspberry PI, measuring data via BMP085 sensor.
 In development mode there is a mock implementation generating random data.
@@ -49,7 +49,7 @@ mvn spring-boot:run -Dspring.profiles.active=dev
 
 to run it on the development machine.
 
-###raspberrypi-boot-server###
+### raspberrypi-boot-server
 
 This is the web application relaying the MQTT data via stomp and pushing
 it to the clients via Websocket.
@@ -72,7 +72,7 @@ mvn springBoot:run -Dspring.profiles.active=dev
 
 to run it.
 
-###raspberrypi-boot-gdata###
+### raspberrypi-boot-gdata
 
 This is the application consuming the MQTT data and writing it to a
 Google Data Spreadsheet.

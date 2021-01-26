@@ -41,7 +41,6 @@ public class PushoverNotificationHandler {
                 result = client.pushMessage(PushoverMessage.builderWithApiToken(pushoverProperties.getApiToken())
                         .setUserId(pushoverProperties.getUserId())
                         .setMessage(message)
-                        //.setDevice("device")
                         .setPriority(MessagePriority.HIGH) // HIGH|NORMAL|QUIET
                         .setTitle(pushoverProperties.getTitle())
                         .setUrl(pushoverProperties.getUrl())
@@ -49,9 +48,9 @@ public class PushoverNotificationHandler {
                         .setSound(pushoverProperties.getSound())
                         .build());
             } catch (PushoverException e) {
-                logger.error("Pushover Nachricht konnte nicht erstellt und versendet werden. ", e);
+                logger.error("could not create Pushover message. ", e);
             }
-            logger.info("Pushover Nachricht wurde erfolgreich erstellt und versendet. {}", result.toString());
+            logger.info("could not create Pushover message: {}", result.toString());
         }
     }
 

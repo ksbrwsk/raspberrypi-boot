@@ -14,7 +14,6 @@ public class Bmp085MessageExtractor {
 
     @Transformer(inputChannel = "newBmp085DataEvent", outputChannel = "bmp085Data")
     public Bmp085Message extractMessage(Bmp085DataEvent bmp085Event) {
-        Bmp085Message message = bmp085Event.getBmp085Message();
-        return message;
+        return bmp085Event.getBmp085Message();
     }
 }
