@@ -10,7 +10,8 @@ Features
 * pushing the data via Websocket to the clients
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application consuming the MQTT data and writing it to a Google Spreadsheet
 
-See a live demo [here](http://www.ksbrwsk.de:8080/)
+
+![CI bnuild](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20bnuild/badge.svg)
 
 Prerequisites
 -------------
