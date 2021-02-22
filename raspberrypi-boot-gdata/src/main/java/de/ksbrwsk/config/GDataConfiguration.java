@@ -2,6 +2,7 @@ package de.ksbrwsk.config;
 
 import de.ksbrwsk.gdata.GDataInformation;
 import de.ksbrwsk.gdata.TemperatureMessage;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -55,8 +56,10 @@ public class GDataConfiguration implements EnvironmentAware {
     @Bean
     public DefaultMqttPahoClientFactory defaultMqttPahoClientFactory() {
         DefaultMqttPahoClientFactory defaultMqttPahoClientFactory = new DefaultMqttPahoClientFactory();
-        defaultMqttPahoClientFactory.setUserName(this.environment.getProperty("mqtt.username"));
-        defaultMqttPahoClientFactory.setPassword(this.environment.getProperty("mqtt.password"));
+        MqttConnectOptions options = new MqttConnectOptions();
+        options.setUserName(this.environment.getProperty("mqtt.username"));
+        options.setPassword(this.environment.getProperty("mqtt.password").toCharArray());
+        defaultMqttPahoClientFactory.setConnectionOptions(options);
         return defaultMqttPahoClientFactory;
     }
 

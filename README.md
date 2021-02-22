@@ -11,7 +11,7 @@ Features
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application consuming the MQTT data and writing it to a Google Spreadsheet
 
 
-![CI bnuild](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20bnuild/badge.svg)
+![CI build](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20bnuild/badge.svg)
 
 Prerequisites
 -------------

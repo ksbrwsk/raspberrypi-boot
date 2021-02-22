@@ -3,6 +3,7 @@ package de.ksbrwsk.config;
 import de.ksbrwsk.bmp085.Bmp085DataEvent;
 import de.ksbrwsk.bmp085.Bmp085DataEventPublisher;
 import de.ksbrwsk.bmp085.DeviceInformation;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -60,8 +61,10 @@ public class ApplicationConfiguration implements EnvironmentAware {
     @Bean
     public DefaultMqttPahoClientFactory defaultMqttPahoClientFactory() {
         DefaultMqttPahoClientFactory defaultMqttPahoClientFactory = new DefaultMqttPahoClientFactory();
-        defaultMqttPahoClientFactory.setUserName(this.environment.getProperty("mqtt.username"));
-        defaultMqttPahoClientFactory.setPassword(this.environment.getProperty("mqtt.password"));
+        MqttConnectOptions options = new MqttConnectOptions();
+        options.setUserName(this.environment.getProperty("mqtt.username"));
+        options.setPassword(this.environment.getProperty("mqtt.password").toCharArray());
+        defaultMqttPahoClientFactory.setConnectionOptions(options);
         return defaultMqttPahoClientFactory;
     }
 
