@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,7 +36,7 @@ public class GDataOAuth2Authenticator {
 
     @Autowired
     public GDataOAuth2Authenticator(GDataInformation gDataInformation) throws GDataException {
-        scopesList = Arrays.asList(gDataInformation.getScopes());
+        scopesList = List.of(gDataInformation.getScopes());
         try {
             httpTransport = GoogleNetHttpTransport.newTrustedTransport();
             dataStoreFactory = new FileDataStoreFactory(DATA_STORE_DIR);
