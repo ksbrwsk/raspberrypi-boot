@@ -5,10 +5,11 @@ Features
 
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application measuring temperature and pressure with an BMP085 sensor
 * Measured data is sent via MQTT to a [RabbitMQ](http://www.rabbitmq.com/) server
-* Application is using [Spring-Integration 4.1](http://projects.spring.io/spring-boot/) with annotation based configuration
+* Application is using [Spring-Integration](http://projects.spring.io/spring-boot/) with annotation based configuration
 * A [Springboot](http://projects.spring.io/spring-boot/) web application consuming the MQTT data and relaying it via STOMP
 * pushing the data via Websocket to the clients
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application consuming the MQTT data and writing it to a Google Spreadsheet
+* A [Springboot](http://projects.spring.io/spring-boot/) standalone application pushing alerts to your smartphone using [Pushover](https://pushover.net/) 
 
 
 ![CI build](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20bnuild/badge.svg)
@@ -18,7 +19,7 @@ Prerequisites
 
 **What you need to run the applications:**
 
-* Java 8
+* Java 17
 * RabbitMQ (http://www.http://www.rabbitmq.com)
 * RaspberryPI with Java 8 installed and wired BMP085 sensor
 * pi4j (http://pi4j.com)
