@@ -106,7 +106,7 @@ the server sends notification event.
 
 Application properties can be configured in
 ```
-raspberrypi-boot-gdata/src/main/resources
+raspberrypi-boot-pushover/src/main/resources
 ```
 
 Use
