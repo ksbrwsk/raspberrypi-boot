@@ -98,3 +98,26 @@ mvn springBoot:run -Dspring.profiles.active=dev
 ```
 
 to run it.
+
+### raspberrypi-boot-pushover
+
+This is the application sending temperature alerts to your smartphone if
+the server sends notification event. 
+
+Application properties can be configured in
+```
+raspberrypi-boot-gdata/src/main/resources
+```
+
+Use
+
+```
+mvn clean install
+```
+to build the application and
+
+```
+mvn springBoot:run -Dspring.profiles.active=dev
+```
+
+to run it.
