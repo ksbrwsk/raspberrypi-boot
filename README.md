@@ -21,7 +21,7 @@ Prerequisites
 
 * Java 17
 * RabbitMQ (http://www.http://www.rabbitmq.com)
-* RaspberryPI with Java 8 installed and wired BMP085 sensor
+* RaspberryPI with Java 17 installed and wired BMP085 sensor
 * pi4j (http://pi4j.com)
 
 Module description
