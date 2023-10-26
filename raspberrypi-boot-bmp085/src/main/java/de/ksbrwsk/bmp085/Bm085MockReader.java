@@ -75,11 +75,13 @@ public class Bm085MockReader implements Bmp085Reader {
 
         @Override
         public void run() {
+            LOGGER.info("BMP085 MOCK READER starting ...");
             while (running) {
                 double temperature = randomDouble(18.7, 24.2);
                 double pressure = randomDouble(996.0, 1005.2);
                 Bmp085Message message = new Bmp085Message(deviceInformation.getDeviceId(), deviceInformation.getLocation(),
                         temperature, pressure, 180.0);
+                LOGGER.info("MOCK READER publishing new temperature messsage -> {}", message.toString());
                 bmp085DataEventPublisher.bmp085DataEvent(message);
 
                 try {

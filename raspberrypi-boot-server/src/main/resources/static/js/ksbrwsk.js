@@ -9,9 +9,9 @@ var deviceLocation = 'location';
 
 connect();
 
-$('#fadeThermometer').fadeIn('slow');
-$('#fadeDateTime').fadeIn('slow');
-$('#fadeDevice').fadeIn('slow');
+// $('#fadeThermometer').fadeIn('slow');
+// $('#fadeDateTime').fadeIn('slow');
+// $('#fadeDevice').fadeIn('slow');
 
 function connect() {
     var socket = new SockJS('/temperature');

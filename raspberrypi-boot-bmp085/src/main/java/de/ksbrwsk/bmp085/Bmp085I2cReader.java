@@ -168,6 +168,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
         }
 
         public void run() {
+            LOGGER.info("BMP085 starts listening...");
             try {
                 while (running) {
                     bmp085device.write(READPRESSURECMD, READTEMPCMD);
@@ -181,6 +182,7 @@ public class Bmp085I2cReader implements Bmp085Reader {
                     int rawPressure = (msb << 16) + (lsb << 8) + xlsb >> 5;
 
                     Bmp085Message message = convertPressureTemp(rawPressure, rawTemperature);
+                    LOGGER.info("Publish new temperature message -> {}", message.toString());
                     bmp085DataEventPublisher.bmp085DataEvent(message);
                     Thread.sleep(20000L);
                 }

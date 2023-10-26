@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationEvent;
  */
 public class Bmp085DataEvent extends ApplicationEvent {
 
-    private Bmp085Message bmp085Message;
+    private final Bmp085Message bmp085Message;
 
     public Bmp085DataEvent(Object source, Bmp085Message bmp085Message) {
         super(source);

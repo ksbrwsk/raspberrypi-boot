@@ -24,6 +24,8 @@ import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author saborowski
@@ -101,10 +103,10 @@ public class ApplicationConfiguration implements EnvironmentAware {
         return new ObjectToJsonTransformer();
     }
 
-    @Bean
-    public Bmp085DataEventPublisher bmp085DataEventPublisher() {
-        return new Bmp085DataEventPublisher();
-    }
+//    @Bean
+//    public Bmp085DataEventPublisher bmp085DataEventPublisher() {
+//        return new Bmp085DataEventPublisher();
+//    }
 
     @Bean
     public ApplicationEventListeningMessageProducer applicationEventListeningMessageProducer() {
@@ -116,8 +118,10 @@ public class ApplicationConfiguration implements EnvironmentAware {
 
     @Bean
     public Executor executor() {
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(2);
-        return executor;
+//        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+//        executor.setCorePoolSize(2);
+//        return executor;
+        ExecutorService executorVirtualThread = Executors.newVirtualThreadPerTaskExecutor();
+        return executorVirtualThread;
     }
 }

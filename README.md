@@ -19,9 +19,9 @@ Prerequisites
 
 **What you need to run the applications:**
 
-* Java 17
-* RabbitMQ (http://www.http://www.rabbitmq.com)
-* RaspberryPI with Java 17 installed and wired BMP085 sensor
+* Java 21
+* RabbitMQ (http://www.rabbitmq.com)
+* RaspberryPI with Java 21 installed and wired BMP085 sensor
 * pi4j (http://pi4j.com)
 
 Module description

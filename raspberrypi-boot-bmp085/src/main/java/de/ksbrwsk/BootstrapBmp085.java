@@ -19,8 +19,8 @@ public class BootstrapBmp085 {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(BootstrapBmp085.class);
 
-    public static void main(String args[]) {
-        new SpringApplicationBuilder(BootstrapBmp085.class);
+    public static void main(String[] args) {
+        SpringApplication.run(BootstrapBmp085.class, args);
         LOGGER.info("BMP085 Reader started.");
     }
 

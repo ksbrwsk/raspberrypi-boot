@@ -7,9 +7,6 @@ updates:
     time: "04:00"
   open-pull-requests-limit: 10
   ignore:
-  - dependency-name: io.netty:netty-all
+  - dependency-name: com.pi4j:pi4j-core
     versions:
-    - 4.1.62.Final
-  - dependency-name: org.springframework.boot:spring-boot-starter-parent
-    versions:
-    - 2.4.4
+    - 1.4
