@@ -10,3 +10,6 @@ updates:
   - dependency-name: com.pi4j:pi4j-core
     versions:
     - 1.4
+  - dependency-name: org.eclipse.paho:org.eclipse.paho.client.mqttv3
+    versions:
+    - 1.2.5

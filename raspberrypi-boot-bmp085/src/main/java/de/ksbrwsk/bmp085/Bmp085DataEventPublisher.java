@@ -8,7 +8,6 @@ import org.springframework.integration.annotation.ServiceActivator;
 /**
  * @author saborowski
  */
-@MessageEndpoint
 public class Bmp085DataEventPublisher implements ApplicationEventPublisherAware {
 
     private ApplicationEventPublisher applicationEventPublisher;
