@@ -12,7 +12,7 @@ Features
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application pushing alerts to your smartphone using [Pushover](https://pushover.net/) 
 
 
-![CI build](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20bnuild/badge.svg)
+![CI build](https://github.com/ksbrwsk/raspberrypi-boot/workflows/CI%20build/badge.svg)
 
 Prerequisites
 -------------
@@ -45,7 +45,7 @@ mvn clean install
 to build the application and
 
 ```
-java -jar target/raspberrypi-boot-bmp085-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+java -jar target/raspberrypi-boot-bmp085-1.4.0-SNAPSHOT.jar --spring.profiles.active=dev
 mvn spring-boot:run -Dspring.profiles.active=dev
 ```
 
