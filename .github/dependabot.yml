@@ -8,8 +8,6 @@ updates:
   open-pull-requests-limit: 10
   ignore:
   - dependency-name: com.pi4j:pi4j-core
-    versions:
-    - 1.4
+    versions: ["2.x", "3.x"]
   - dependency-name: org.eclipse.paho:org.eclipse.paho.client.mqttv3
-    versions:
-    - 1.2.5
+    versions: [ "1.x", "2.x" ]
