@@ -12,9 +12,9 @@ public class GDataInformation {
     private String pathClientSecretFile;
 
     public GDataInformation(String applicationName, String pathClientSecretFile, String scopes) {
-        Assert.notNull(applicationName);
-        Assert.notNull(pathClientSecretFile);
-        Assert.notNull(scopes);
+        Assert.notNull(applicationName, "applicationName must not be null");
+        Assert.notNull(pathClientSecretFile, "pathClientSecretFile must not be null");
+        Assert.notNull(scopes, "scopes must not be null");
         this.applicationName = applicationName;
         this.pathClientSecretFile = pathClientSecretFile;
         this.scopes = scopes;

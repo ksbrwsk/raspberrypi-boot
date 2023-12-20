@@ -1,0 +1,180 @@
+a9d0be2 - Kai Saborowski, vor 4 Wochen : Fixed version in README.md.
+854dbd6 - Kai Saborowski, vor 4 Wochen : Bumped Version to 1.4.0-SNAPSHOT, Spring Boot 3.1.5, Java 21.
+55fec0b - Kai Saborowski, vor 4 Wochen : Update Zwischenstand.
+dd28d18 - Kai Saborowski, vor 4 Wochen : Update Zwischenstand.
+641041d - Kai Saborowski, vor 4 Wochen : Update Zwischenstand.
+dc84eb9 - Kai Saborowski, vor 4 Wochen : Merge pull request #119 from ksbrwsk/dependabot/maven/com.pi4j-pi4j-core-2.4.0
+ad725d8 - Kai Saborowski, vor 4 Wochen : Merge pull request #118 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.1.5
+f8f6e15 - dependabot[bot], vor 4 Wochen : Bump com.pi4j:pi4j-core from 2.3.0 to 2.4.0
+0b2d607 - dependabot[bot], vor 5 Wochen : Bump org.springframework.boot:spring-boot-starter-parent
+08ea634 - Kai Saborowski, vor 6 Wochen : Merge pull request #77 from ksbrwsk/dependabot/maven/com.google.apis-google-api-services-oauth2-v2-rev20200213-2.0.0
+fc04f09 - Kai Saborowski, vor 6 Wochen : Merge pull request #117 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.15.3
+07d05e2 - dependabot[bot], vor 6 Wochen : Bump com.fasterxml.jackson.core:jackson-databind from 2.15.2 to 2.15.3
+fbb9567 - Kai Saborowski, vor 6 Wochen : Merge pull request #116 from ksbrwsk/dependabot/maven/com.google.guava-guava-32.1.3-jre
+976edfc - dependabot[bot], vor 6 Wochen : Bump com.google.guava:guava from 32.1.2-jre to 32.1.3-jre
+003de27 - Kai Saborowski, vor 9 Wochen : Merge pull request #115 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.1.4
+341e471 - dependabot[bot], vor 9 Wochen : Bump org.springframework.boot:spring-boot-starter-parent
+f73cbc9 - Kai Saborowski, vor 9 Wochen : Merge pull request #114 from ksbrwsk/dependabot/maven/com.google.guava-guava-32.1.2-jre
+8e654a2 - Kai Saborowski, vor 9 Wochen : Merge pull request #113 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.1.3
+13813aa - dependabot[bot], vor 9 Wochen : Bump com.google.guava:guava from 32.1.1-jre to 32.1.2-jre
+b720a88 - dependabot[bot], vor 9 Wochen : Bump org.springframework.boot:spring-boot-starter-parent
+3d99610 - Kai Saborowski, vor 10 Wochen : Merge pull request #112 from ksbrwsk/dependabot/maven/com.google.guava-guava-32.1.1-jre
+8b1c8f4 - Kai Saborowski, vor 10 Wochen : Merge branch 'master' into dependabot/maven/com.google.guava-guava-32.1.1-jre
+f0c752b - Kai Saborowski, vor 10 Wochen : Merge pull request #110 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.1.1
+ee14451 - Kai Saborowski, vor 10 Wochen : Merge pull request #109 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.43.3
+2b5ae2b - Kai Saborowski, vor 10 Wochen : Merge pull request #108 from ksbrwsk/dependabot/maven/raspberrypi-boot-gdata/com.google.guava-guava-32.0.0-jre
+b65b1be - Kai Saborowski, vor 10 Wochen : Merge pull request #106 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.15.2
+af59d2c - dependabot[bot], vor 5 Monaten : Bump guava from 31.1-jre to 32.1.1-jre
+c60f5ef - dependabot[bot], vor 5 Monaten : Bump spring-boot-starter-parent from 3.0.5 to 3.1.1
+fa1416a - dependabot[bot], vor 5 Monaten : Bump google-http-client-jackson2 from 1.43.1 to 1.43.3
+2de974c - dependabot[bot], vor 5 Monaten : Bump guava from 31.1-jre to 32.0.0-jre in /raspberrypi-boot-gdata
+0b35143 - dependabot[bot], vor 6 Monaten : Bump jackson-databind from 2.14.2 to 2.15.2
+819e6f9 - Kai Saborowski, vor 7 Monaten : Merge pull request #99 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.0.5
+9d6fb12 - dependabot[bot], vor 7 Monaten : Bump spring-boot-starter-parent from 3.0.4 to 3.0.5
+49594f9 - Kai Saborowski, vor 7 Monaten : Merge pull request #98 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.43.1
+be6a699 - Kai Saborowski, vor 7 Monaten : Merge pull request #97 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-3.0.4
+0048c88 - Kai Saborowski, vor 7 Monaten : Merge pull request #94 from ksbrwsk/dependabot/maven/com.pi4j-pi4j-core-2.3.0
+841c162 - Kai Saborowski, vor 7 Monaten : Merge pull request #93 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.14.2
+983bb80 - dependabot[bot], vor 8 Monaten : Bump google-http-client-jackson2 from 1.41.8 to 1.43.1
+270dbf3 - dependabot[bot], vor 9 Monaten : Bump spring-boot-starter-parent from 2.7.0 to 3.0.4
+fa0a105 - dependabot[bot], vor 10 Monaten : Bump pi4j-core from 1.4 to 2.3.0
+eac50eb - dependabot[bot], vor 10 Monaten : Bump jackson-databind from 2.13.3 to 2.14.2
+7f193ce - dependabot[bot], vor 1 Jahr, und 4 Monaten : Bump google-api-services-oauth2
+a610045 - Kai Saborowski, vor 1 Jahr, und 6 Monaten : Merge pull request #69 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.41.8
+9288e76 - Kai Saborowski, vor 1 Jahr, und 6 Monaten : Merge pull request #70 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.13.3
+bce5f06 - Kai Saborowski, vor 1 Jahr, und 6 Monaten : Merge pull request #71 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.7.0
+bcbce48 - dependabot[bot], vor 1 Jahr, und 6 Monaten : Bump spring-boot-starter-parent from 2.6.7 to 2.7.0
+53a2545 - dependabot[bot], vor 1 Jahr, und 6 Monaten : Bump jackson-databind from 2.13.2.2 to 2.13.3
+bdd1765 - dependabot[bot], vor 1 Jahr, und 7 Monaten : Bump google-http-client-jackson2 from 1.41.7 to 1.41.8
+0e4cbfa - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Update README.md.
+90973ed - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Update README.md.
+1c72a29 - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Merge branch 'master' of https://github.com/ksbrwsk/raspberrypi-boot
+8b5effb - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Update README.md.
+07fa061 - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Merge pull request #68 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.7
+dfc009d - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Update README.md.
+633073f - dependabot[bot], vor 1 Jahr, und 7 Monaten : Bump spring-boot-starter-parent from 2.6.6 to 2.6.7
+35a1b9f - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Merge pull request #65 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.6
+a372902 - Kai Saborowski, vor 1 Jahr, und 7 Monaten : Merge pull request #67 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.41.7
+5089cc2 - dependabot[bot], vor 1 Jahr, und 7 Monaten : Bump google-http-client-jackson2 from 1.41.5 to 1.41.7
+e3a1021 - dependabot[bot], vor 1 Jahr, und 8 Monaten : Bump spring-boot-starter-parent from 2.6.5 to 2.6.6
+ed8de83 - Kai Saborowski, vor 1 Jahr, und 8 Monaten : Merge pull request #62 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.5
+128d4c5 - Kai Saborowski, vor 1 Jahr, und 8 Monaten : Merge pull request #63 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.41.5
+134c939 - Kai Saborowski, vor 1 Jahr, und 8 Monaten : Merge pull request #64 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.13.2.2
+801e6d4 - dependabot[bot], vor 1 Jahr, und 8 Monaten : Bump jackson-databind from 2.13.2 to 2.13.2.2
+a932009 - dependabot[bot], vor 1 Jahr, und 8 Monaten : Bump google-http-client-jackson2 from 1.41.4 to 1.41.5
+5315c56 - dependabot[bot], vor 1 Jahr, und 8 Monaten : Bump spring-boot-starter-parent from 2.6.4 to 2.6.5
+d4e7939 - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Merge pull request #60 from ksbrwsk/dependabot/maven/com.google.guava-guava-31.1-jre
+a884834 - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Merge pull request #59 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.13.2
+e50bf6f - dependabot[bot], vor 1 Jahr, und 9 Monaten : Bump guava from 30.1.1-jre to 31.1-jre
+9ea4d84 - dependabot[bot], vor 1 Jahr, und 9 Monaten : Bump jackson-databind from 2.13.1 to 2.13.2
+aae3634 - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Bumped Google Guava to 30.1.1-jre.
+7e00c72 - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Merge pull request #57 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.4
+ac62c0c - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Merge pull request #58 from ksbrwsk/dependabot/maven/com.google.guava-guava-31.1-jre
+28bae42 - dependabot[bot], vor 1 Jahr, und 9 Monaten : Bump guava from 30.1.1-jre to 31.1-jre
+b8eff76 - dependabot[bot], vor 1 Jahr, und 9 Monaten : Bump spring-boot-starter-parent from 2.6.3 to 2.6.4
+3dae072 - Kai Saborowski, vor 1 Jahr, und 9 Monaten : Merge pull request #56 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.41.4
+3ab2157 - dependabot[bot], vor 1 Jahr, und 9 Monaten : Bump google-http-client-jackson2 from 1.41.0 to 1.41.4
+b8ac403 - Kai Saborowski, vor 1 Jahr, und 10 Monaten : Merge pull request #51 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.41.0
+2afce37 - Kai Saborowski, vor 1 Jahr, und 10 Monaten : Merge pull request #52 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.3
+fd79242 - dependabot[bot], vor 1 Jahr, und 10 Monaten : Bump spring-boot-starter-parent from 2.6.1 to 2.6.3
+33bfa5c - dependabot[bot], vor 1 Jahr, und 11 Monaten : Bump google-http-client-jackson2 from 1.40.0 to 1.41.0
+ed92aaa - Kai Saborowski, vor 1 Jahr, und 11 Monaten : Merge pull request #49 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.13.1
+c59e530 - dependabot[bot], vor 1 Jahr, und 11 Monaten : Bump jackson-databind from 2.12.5 to 2.13.1
+c6e2637 - Kai Saborowski, vor 2 Jahren : Bumped Java version to 17, set PI4J version back to 1.4.
+dc5f0ae - Kai Saborowski, vor 2 Jahren : Merge pull request #47 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.6.1
+3dd4492 - dependabot[bot], vor 2 Jahren : Bump spring-boot-starter-parent from 2.5.6 to 2.6.1
+fed4f81 - Kai Saborowski, vor 2 Jahren, und 1 Monat : Merge pull request #43 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.6
+2621175 - dependabot[bot], vor 2 Jahren, und 1 Monat : Bump spring-boot-starter-parent from 2.5.4 to 2.5.6
+9046f93 - Kai Saborowski, vor 2 Jahren, und 3 Monaten : Merge pull request #35 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.12.5
+9bd63e9 - Kai Saborowski, vor 2 Jahren, und 3 Monaten : Merge pull request #36 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.40.0
+0c25d8d - Kai Saborowski, vor 2 Jahren, und 3 Monaten : Merge pull request #37 from ksbrwsk/dependabot/maven/com.pi4j-pi4j-core-2.0
+10564d6 - dependabot[bot], vor 2 Jahren, und 3 Monaten : Bump pi4j-core from 1.4 to 2.0
+7494267 - dependabot[bot], vor 2 Jahren, und 3 Monaten : Bump google-http-client-jackson2 from 1.39.2-sp.1 to 1.40.0
+e2ca7ac - dependabot[bot], vor 2 Jahren, und 3 Monaten : Bump jackson-databind from 2.12.4 to 2.12.5
+b6674ef - Kai Saborowski, vor 2 Jahren, und 3 Monaten : Merge pull request #34 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.4
+ccb21ff - dependabot[bot], vor 2 Jahren, und 3 Monaten : Bump spring-boot-starter-parent from 2.5.3 to 2.5.4
+f55a4eb - Kai Saborowski, vor 2 Jahren, und 4 Monaten : Github build workflow now using java 16.
+8fc22dd - Kai Saborowski, vor 2 Jahren, und 4 Monaten : Bumped java version to 16, added spring-boot-starter-netty.
+ae31e76 - Kai Saborowski, vor 2 Jahren, und 4 Monaten : Merge pull request #33 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.3
+bac23b1 - dependabot[bot], vor 2 Jahren, und 4 Monaten : Bump spring-boot-starter-parent from 2.5.2 to 2.5.3
+ac34356 - Kai Saborowski, vor 2 Jahren, und 4 Monaten : Merge pull request #31 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.8
+c267b15 - dependabot[bot], vor 2 Jahren, und 4 Monaten : Bump reactor-core from 3.4.7 to 3.4.8
+9ffb2d4 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #30 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.12.4
+dafc171 - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump jackson-databind from 2.12.3 to 2.12.4
+27057b0 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #29 from ksbrwsk/dependabot/maven/com.google.apis-google-api-services-oauth2-v2-rev20200213-1.32.1
+664d4d3 - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump google-api-services-oauth2
+8b8b555 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #27 from ksbrwsk/dependabot/maven/com.google.http-client-google-http-client-jackson2-1.39.2-sp.1
+a6f7ea8 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #28 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.2
+4f514b5 - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump spring-boot-starter-parent from 2.5.1 to 2.5.2
+68a595c - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump google-http-client-jackson2 from 1.38.0 to 1.39.2-sp.1
+0f7b152 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Fixed missing jackson2 JsonFactory.
+3e14e96 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #26 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.7
+fbaa42e - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump reactor-core from 3.4.6 to 3.4.7
+ef07c05 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #25 from ksbrwsk/dependabot/maven/com.google.apis-google-api-services-oauth2-v2-rev20200213-1.31.5
+7678bb0 - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump google-api-services-oauth2
+17d2274 - Kai Saborowski, vor 2 Jahren, und 5 Monaten : Merge pull request #24 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.1
+d6e1f6a - dependabot[bot], vor 2 Jahren, und 5 Monaten : Bump spring-boot-starter-parent from 2.5.0 to 2.5.1
+64265cc - Kai Saborowski, vor 2 Jahren, und 6 Monaten : Merge pull request #23 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.5.0
+6991490 - dependabot[bot], vor 2 Jahren, und 6 Monaten : Bump spring-boot-starter-parent from 2.4.5 to 2.5.0
+72b58c4 - Kai Saborowski, vor 2 Jahren, und 6 Monaten : Merge pull request #22 from ksbrwsk/dependabot/maven/io.netty-netty-all-4.1.65.Final
+074a0dd - dependabot[bot], vor 2 Jahren, und 6 Monaten : Bump netty-all from 4.1.63.Final to 4.1.65.Final
+91b7207 - Kai Saborowski, vor 2 Jahren, und 6 Monaten : Bumped Java version to 11, netty-all 4.1.63.
+95336c7 - Kai Saborowski, vor 2 Jahren, und 6 Monaten : Merge pull request #21 from ksbrwsk/dependabot/maven/io.netty-netty-all-4.1.64.Final
+33b6677 - dependabot[bot], vor 2 Jahren, und 6 Monaten : Bump netty-all from 4.1.63.Final to 4.1.64.Final
+e896a54 - Kai Saborowski, vor 2 Jahren, und 6 Monaten : Merge pull request #20 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.6
+a6c907e - dependabot[bot], vor 2 Jahren, und 6 Monaten : Bump reactor-core from 3.4.5 to 3.4.6
+c710ee5 - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #17 from ksbrwsk/dependabot/maven/com.fasterxml.jackson.core-jackson-databind-2.12.3
+d266012 - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #18 from ksbrwsk/dependabot/maven/com.google.guava-guava-30.1.1-jre
+866660f - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #19 from ksbrwsk/dependabot/add-v2-config-file
+659aea5 - dependabot-preview[bot], vor 2 Jahren, und 7 Monaten : Upgrade to GitHub-native Dependabot
+9a757fb - dependabot-preview[bot], vor 2 Jahren, und 7 Monaten : Bump guava from 29.0-jre to 30.1.1-jre
+366c776 - dependabot-preview[bot], vor 2 Jahren, und 7 Monaten : Bump jackson-databind from 2.11.3 to 2.12.3
+706d9e2 - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #13 from ksbrwsk/dependabot/maven/raspberrypi-boot-gdata/com.google.guava-guava-29.0-jre
+9e3322d - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #14 from ksbrwsk/dependabot/maven/io.netty-netty-all-4.1.63.Final
+f17f03e - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #15 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.5
+58e48f1 - Kai Saborowski, vor 2 Jahren, und 7 Monaten : Merge pull request #16 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.4.5
+a4833e4 - dependabot-preview[bot], vor 2 Jahren, und 7 Monaten : Bump spring-boot-starter-parent from 2.4.3 to 2.4.5
+e24effb - dependabot-preview[bot], vor 2 Jahren, und 7 Monaten : Bump reactor-core from 3.4.4 to 3.4.5
+0c14e55 - dependabot-preview[bot], vor 2 Jahren, und 8 Monaten : Bump netty-all from 4.1.60.Final to 4.1.63.Final
+d1c418a - dependabot[bot], vor 2 Jahren, und 8 Monaten : Bump guava from 25.1-jre to 29.0-jre in /raspberrypi-boot-gdata
+09385f1 - Kai Saborowski, vor 2 Jahren, und 8 Monaten : Merge pull request #10 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.4
+f29cacf - dependabot-preview[bot], vor 2 Jahren, und 8 Monaten : Bump reactor-core from 3.4.3 to 3.4.4
+0a8ae05 - Kai Saborowski, vor 2 Jahren, und 8 Monaten : Merge pull request #9 from ksbrwsk/dependabot/maven/io.netty-netty-all-4.1.60.Final
+ffd9c2e - dependabot-preview[bot], vor 2 Jahren, und 8 Monaten : Bump netty-all from 4.1.59.Final to 4.1.60.Final
+344334c - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #8 from ksbrwsk/dependabot/maven/com.pi4j-pi4j-core-1.4
+08ea2ec - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump pi4j-core from 1.3 to 1.4
+ef15bd3 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Fixes Paho MQTT Connection issues.
+4b39a53 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #6 from ksbrwsk/dependabot/maven/org.springframework.boot-spring-boot-starter-parent-2.4.3
+919cbab - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #2 from ksbrwsk/dependabot/maven/io.projectreactor-reactor-core-3.4.3
+ec29f84 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #3 from ksbrwsk/dependabot/maven/com.pi4j-pi4j-core-1.3
+f2defa1 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #4 from ksbrwsk/dependabot/maven/com.google.apis-google-api-services-oauth2-v2-rev20200213-1.31.0
+353bc77 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #5 from ksbrwsk/dependabot/maven/io.netty-netty-all-4.1.59.Final
+af9b1d0 - Kai Saborowski, vor 2 Jahren, und 9 Monaten : Merge pull request #7 from ksbrwsk/dependabot/maven/org.eclipse.paho-org.eclipse.paho.client.mqttv3-1.2.5
+4eb0b9d - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump org.eclipse.paho.client.mqttv3 from 1.2.2 to 1.2.5
+76cc362 - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump spring-boot-starter-parent from 2.2.6.RELEASE to 2.4.3
+11cd785 - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump netty-all from 4.1.48.Final to 4.1.59.Final
+dcd3fcf - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump google-api-services-oauth2
+f9e4498 - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump pi4j-core from 1.2 to 1.3
+102faee - dependabot-preview[bot], vor 2 Jahren, und 9 Monaten : Bump reactor-core from 3.3.11.RELEASE to 3.4.3
+fa852ab - Kai Saborowski, vor 2 Jahren, und 10 Monaten : added CI build.
+71bba6c - Kai Saborowski, vor 2 Jahren, und 10 Monaten : Create maven.yml
+b816d86 - Kai Saborowski, vor 2 Jahren, und 10 Monaten : Fixes Dependabot alerts.
+8e22291 - Kai Saborowski, vor 3 Jahren, und 8 Monaten : Update to Spring Boot 2.2.6.
+8970249 - Kai Saborowski, vor 3 Jahren, und 8 Monaten : Update to Spring Boot 2.2.5.
+715144f - Kai Saborowski, vor 7 Jahren : Merge branch 'master' of https://github.com/ksbrwsk/raspberrypi-boot
+79aed82 - Kai Saborowski, vor 7 Jahren : changed version in pom files to 1.0.1-SNAPSHOT
+8294ba4 - Kai Saborowski, vor 7 Jahren : Preparing release 1.0.0
+ffb938e - Kai Saborowski, vor 7 Jahren : Update README.md
+f43e3f9 - Kai Saborowski, vor 7 Jahren : changed to maven, update to latest dependencies
+1e85e9b - Kai Saborowski, vor 9 Jahren : removed unused methods
+4bbd612 - Kai Saborowski, vor 9 Jahren : update to Springboot 1.2.2
+2c70ceb - Kai Saborowski, vor 9 Jahren : Fix profile setting for MockReader
+d8ead23 - Kai Saborowski, vor 9 Jahren : now using annotation based Spring-Integration configuration, code cleanup
+f181bcb - Kai Saborowski, vor 9 Jahren : added Subproject raspberrypi-boot-gdata, polishing
+b22cf84 - Kai Saborowski, vor 9 Jahren : gradle build reworked, javascript deps updated, update to Springboot 1.2.1
+4c8bcf9 - Kai Saborowski, vor 9 Jahren : Fixed typo in README.md
+fdb64ef - Kai Saborowski, vor 9 Jahren : removed user details
+89d3c1c - Kai Saborowski, vor 9 Jahren : Merge remote-tracking branch 'origin/master'
+5b48cae - Kai Saborowski, vor 9 Jahren : removes userdata
+ff9a406 - Kai Saborowski, vor 9 Jahren : Update README.md
+c4e61a4 - Kai Saborowski, vor 9 Jahren : initial commit
