@@ -5,7 +5,7 @@ Features
 
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application measuring temperature and pressure with an BMP085 sensor
 * Measured data is sent via MQTT to a [RabbitMQ](http://www.rabbitmq.com/) server
-* Application is using [Spring-Integration](http://projects.spring.io/spring-boot/) with annotation based configurationgit log --pretty=format:"%h - %an, %ar : %s" > CHANGELOG.txt
+* Application is using [Spring-Integration](http://projects.spring.io/spring-boot/) with annotation based configuration
 * A [Springboot](http://projects.spring.io/spring-boot/) web application consuming the MQTT data and relaying it via STOMP
 * pushing the data via Websocket to the clients
 * A [Springboot](http://projects.spring.io/spring-boot/) standalone application consuming the MQTT data and writing it to a Google Spreadsheet
